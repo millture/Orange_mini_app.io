@@ -30,7 +30,7 @@ async def main(page: ft.Page):
         if score.data % 100 == 0:
             page.snack_bar = ft.SnackBar(
                 content=ft.Text(
-                    value='+100',
+                    value='Люблю тебя 🧡',
                     size = 20,
                     color="#ff8b1f",
                     text_align=ft.TextAlign.CENTER
@@ -38,6 +38,7 @@ async def main(page: ft.Page):
                 bgcolor="#25223a"
             )
             page.snack_bar.open=True
+            
             progress_bar.value=0
 
         page.update()
