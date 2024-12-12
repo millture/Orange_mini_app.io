@@ -41,19 +41,18 @@ async def main(page: ft.Page):
                 ),
                 bgcolor="#25223a"
             )
-            page.snack_bar.open=True
 
-        elif score.data % 243 == 0:
-        page.snack_bar = ft.SnackBar(
+         elif score.data % 243 == 0:
+            page.snack_bar = ft.SnackBar(
             content=ft.Text(
                 value='Ты ж моя принцесска 👸',
                 size = 20,
                 color="#ff8b1f",
                 text_align=ft.TextAlign.CENTER
-            ),
-            bgcolor="#25223a"
-        )
-        page.snack_bar.open=True
+                ),
+                bgcolor="#25223a"
+            )
+            page.snack_bar.open=True
             
             progress_bar.value=0
 
