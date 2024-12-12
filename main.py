@@ -32,8 +32,8 @@ async def main(page: ft.Page):
         progress_bar.value += (1/100)
 
 
-        if score.data % 100 == 0:
-            if score.data % 150 == 0:
+        if score.data % 50 == 0:
+            if score.data % 100 == 0:
                 message = 'Люблю тебя ♥️'
             else:
                 message = 'Ты ж моя принцесска 👸'
