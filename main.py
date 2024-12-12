@@ -30,7 +30,7 @@ async def main(page: ft.Page):
         if score.data % 100 == 0:
             page.snack_bar = ft.SnackBar(
                 content=ft.Text(
-                    value='Люблю тебя 💓',
+                    value='Люблю тебя ♥️',
                     size = 20,
                     color="#ff8b1f",
                     text_align=ft.TextAlign.CENTER
