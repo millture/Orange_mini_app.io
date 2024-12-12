@@ -16,9 +16,13 @@ async def main(page: ft.Page):
 
         image.scale = 0.7
 
-        score_counter.opacity = 1
+        score_counter.opacity = 0.9
         score_counter.value = "+1"
-        print(event.data)
+        
+        score_counter.visible = True
+        
+        score_counter.left = event.local_x
+        score_counter.top = event.local_y
 
         # score_counter.right = 0
         # score_counter.left = event.data['local_x']
@@ -46,6 +50,8 @@ async def main(page: ft.Page):
         await asyncio.sleep(0.1)
         image.scale = 1
         score_counter.opacity = 0
+        score_counter.visible = False
+        
         page.update()
         # page.overlay.clear()
 
@@ -74,7 +80,7 @@ async def main(page: ft.Page):
         score,
         ft.Container(
             content=ft.Stack(controls=[image, score_counter]),
-            on_click=score_up,
+            on_tap_down=score_up,
             margin=ft.Margin(0, 0, 0, 30)
         ),
         ft.Container(
