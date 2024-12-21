@@ -32,50 +32,50 @@ async def main(page: ft.Page):
         progress_bar.value += (1/100)
 
 
-        if score.data % 50 == 0:
-            if score.data % 100 == 0:
-                message = 'Люблю тебя ♥️♥️'
-            else:
-                message = 'Ты ж моя принцесска 👸'
+        # # if score.data % 50 == 0:
+        # #     if score.data % 100 == 0:
+        # #         message = 'Люблю тебя ♥️♥️'
+        # #     else:
+        # #         message = 'Ты ж моя принцесска 👸'
             
-            snack_bar = ft.SnackBar(
-                content=ft.Text(
-                    value=message,
-                    size=20,
-                    color="#ff8b1f",
-                    text_align=ft.TextAlign.CENTER
-                ),
-                bgcolor="#25223a"
-            )
-    
-            page.overlay.append(snack_bar)
-            snack_bar.open = True
-            progress_bar.value = 0
-
-        # if score.data % 100 == 0:
-        #     page.snack_bar = ft.SnackBar(
+        #     snack_bar = ft.SnackBar(
         #         content=ft.Text(
-        #             value='Люблю тебя ♥️',
-        #             size = 20,
+        #             value=message,
+        #             size=20,
         #             color="#ff8b1f",
         #             text_align=ft.TextAlign.CENTER
         #         ),
         #         bgcolor="#25223a"
         #     )
+    
+        #     page.overlay.append(snack_bar)
+        #     snack_bar.open = True
+        #     progress_bar.value = 0
 
-        #  elif score.data % 243 == 0:
-        #     page.snack_bar = ft.SnackBar(
-        #     content=ft.Text(
-        #         value='Ты ж моя принцесска 👸',
-        #         size = 20,
-        #         color="#ff8b1f",
-        #         text_align=ft.TextAlign.CENTER
-        #         ),
-        #         bgcolor="#25223a"
-        #     )
-        #     page.snack_bar.open=True
+        # # if score.data % 100 == 0:
+        # #     page.snack_bar = ft.SnackBar(
+        # #         content=ft.Text(
+        # #             value='Люблю тебя ♥️',
+        # #             size = 20,
+        # #             color="#ff8b1f",
+        # #             text_align=ft.TextAlign.CENTER
+        # #         ),
+        # #         bgcolor="#25223a"
+        # #     )
+
+         if score.data % 100 == 0:
+            page.snack_bar = ft.SnackBar(
+            content=ft.Text(
+                value='+ 100 🍊',
+                size = 20,
+                color="#ff8b1f",
+                text_align=ft.TextAlign.CENTER
+                ),
+                bgcolor="#25223a"
+            )
+            page.snack_bar.open=True
             
-        #     progress_bar.value=0
+            progress_bar.value=0
 
         page.update()
 
