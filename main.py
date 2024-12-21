@@ -34,7 +34,7 @@ async def main(page: ft.Page):
 
         if score.data % 50 == 0:
             if score.data % 100 == 0:
-                message = 'Люблю тебя ♥️'
+                message = 'Люблю тебя ♥️♥️'
             else:
                 message = 'Ты ж моя принцесска 👸'
             
