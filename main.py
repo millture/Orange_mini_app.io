@@ -1,6 +1,7 @@
 import asyncio
 import flet as ft
 
+
 async def main(page: ft.Page):
     page.title = 'Cliker'
     page.theme_mode = ft.ThemeMode.DARK
@@ -18,9 +19,9 @@ async def main(page: ft.Page):
 
         score_counter.opacity = 0.9
         score_counter.value = "+1"
-        
+
         score_counter.visible = True
-        
+
         score_counter.left = event.local_x
         score_counter.top = event.local_y
 
@@ -29,15 +30,14 @@ async def main(page: ft.Page):
         # score_counter.top = event.data['local_y']
         # score_counter.bottom = 0
 
-        progress_bar.value += (1/100)
-
+        progress_bar.value += (1 / 100)
 
         # # if score.data % 50 == 0:
         # #     if score.data % 100 == 0:
         # #         message = 'Люблю тебя ♥️♥️'
         # #     else:
         # #         message = 'Ты ж моя принцесска 👸'
-            
+
         #     snack_bar = ft.SnackBar(
         #         content=ft.Text(
         #             value=message,
@@ -47,7 +47,7 @@ async def main(page: ft.Page):
         #         ),
         #         bgcolor="#25223a"
         #     )
-    
+
         #     page.overlay.append(snack_bar)
         #     snack_bar.open = True
         #     progress_bar.value = 0
@@ -63,17 +63,17 @@ async def main(page: ft.Page):
         # #         bgcolor="#25223a"
         # #     )
 
-         if score.data % 100 == 0:
+        if score.data % 100 == 0:
             snack_bar = ft.SnackBar(
                 content=ft.Text(
                     value='+ 100 🍊',
-                    size = 20,
+                    size=20,
                     color="#ff8b1f",
                     text_align=ft.TextAlign.CENTER
                 ),
                 bgcolor="#25223a"
             )
-             
+
             page.overlay.append(snack_bar)
             snack_bar.open = True
             progress_bar.value = 0
@@ -84,13 +84,13 @@ async def main(page: ft.Page):
         image.scale = 1
         score_counter.opacity = 0
         score_counter.visible = False
-        
+
         page.update()
         # page.overlay.clear()
 
+
     score = ft.Text(value="0", size=100, data=0)
     score_counter = ft.Text(size=50, animate_opacity=ft.Animation(duration=600, curve=ft.AnimationCurve.BOUNCE_IN))
-
 
     image = ft.Image(
         src="pngegg.png",
@@ -98,7 +98,6 @@ async def main(page: ft.Page):
         width=250,  # Установите желаемую ширину
         animate_scale=ft.Animation(duration=600, curve=ft.AnimationCurve.EASE)
     )
-
 
     progress_bar = ft.ProgressBar(
         value=0,
