@@ -64,18 +64,19 @@ async def main(page: ft.Page):
         # #     )
 
          if score.data % 100 == 0:
-            page.snack_bar = ft.SnackBar(
-            content=ft.Text(
-                value='+ 100 🍊🍊',
-                size = 20,
-                color="#ff8b1f",
-                text_align=ft.TextAlign.CENTER
+            snack_bar = ft.SnackBar(
+                content=ft.Text(
+                    value='+ 100 🍊',
+                    size = 20,
+                    color="#ff8b1f",
+                    text_align=ft.TextAlign.CENTER
                 ),
                 bgcolor="#25223a"
             )
-            page.snack_bar.open=True
-            
-            progress_bar.value=0
+             
+            page.overlay.append(snack_bar)
+            snack_bar.open = True
+            progress_bar.value = 0
 
         page.update()
 
