@@ -78,21 +78,21 @@ async def main(page: ft.Page):
                 message = 'Игра началась 🎅'
             else:
                 message = 'Ты выиграла все призы'
-        
-           snack_bar = ft.SnackBar(
+
+            snack_bar = ft.SnackBar(
                 content=ft.Text(
                     value=message,
                     size=20,
                     color="#ff8b1f",
                     text_align=ft.TextAlign.CENTER
                 ),
-                   bgcolor="#25223a"
+                bgcolor="#25223a"
             )
-        
+
             page.overlay.append(snack_bar)
             snack_bar.open = True
             progress_bar.value = 0
-
+            
         page.update()
 
         await asyncio.sleep(0.1)
