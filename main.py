@@ -63,8 +63,10 @@ async def main(page: ft.Page):
         # #         bgcolor="#25223a"
         # #     )
 
-        if score.data % 700 == 0:
-            if score.data % 600 == 0:
+        if score.data % 100 == 0:
+            if score.data % 700 == 0:
+                message = 'Ты выиграла все призы'
+            elif score.data % 600 == 0:
                 message = 'Твой приз 🎶'
             elif score.data % 500 == 0:
                 message = 'Твой приз 👕'
@@ -74,10 +76,9 @@ async def main(page: ft.Page):
                 message = 'Твой приз 🍬'
             elif score.data % 200 == 0:
                 message = 'Твой приз 🧦'
-            elif score.data == 100:  # Если score.data равно 0, игра только начинается
-                message = 'Игра началась 🎅'
             else:
-                message = 'Ты выиграла все призы'
+                message = 'Игра началась 🎅'
+                
 
             snack_bar = ft.SnackBar(
                 content=ft.Text(
