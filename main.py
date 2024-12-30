@@ -63,10 +63,25 @@ async def main(page: ft.Page):
         # #         bgcolor="#25223a"
         # #     )
 
-        if score.data % 100 == 0:
+        if score.data % 700 == 0:
+            if score.data % 100 == 0:
+                message = 'Игра началась 🎅'
+            elif score.data % 200 == 0:
+                message = 'Твой приз 🧦'
+            elif score.data % 300 == 0:
+                message = 'Твой приз 🍬'   
+            elif score.data % 400 == 0:
+                message = 'Твой приз 👖'  
+            elif score.data % 500 == 0:
+                message = 'Твой приз 👕' 
+            elif score.data % 600 == 0:
+                message = 'Твой приз 🎶'
+            else:
+                message = 'Ты выиграла все призы'
+                
             snack_bar = ft.SnackBar(
                 content=ft.Text(
-                    value='+ 100 🍊',
+                    value=message,
                     size=20,
                     color="#ff8b1f",
                     text_align=ft.TextAlign.CENTER
