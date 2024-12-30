@@ -64,17 +64,17 @@ async def main(page: ft.Page):
         # #     )
 
         if score.data % 50 == 0:
-            if score.data % 450 == 0:
+            if score.data % 325 == 0:
                 message = 'Ты выиграла все призы'
-            elif score.data % 429 == 0:
+            elif score.data % 300 == 0:
                 message = 'Твой приз 🎶'
-            elif score.data % 368 == 0:
+            elif score.data % 250 == 0:
                 message = 'Твой приз 👕'
-            elif score.data % 256 == 0:
+            elif score.data % 200 == 0:
                 message = 'Твой приз 👖'
-            elif score.data % 176 == 0:
+            elif score.data % 150 == 0:
                 message = 'Твой приз 🍬'
-            elif score.data % 85 == 0:
+            elif score.data % 100 == 0:
                 message = 'Твой приз 🧦'
             else:
                 message = 'Игра началась 🎅'
