@@ -63,7 +63,7 @@ async def main(page: ft.Page):
         # #         bgcolor="#25223a"
         # #     )
 
-        if score.data % 700 == 0:
+        if score.data % 100 == 0:
             if score.data % 100 == 0:
                 message = 'Игра началась 🎅'
             elif score.data % 200 == 0:
