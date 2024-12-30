@@ -64,31 +64,31 @@ async def main(page: ft.Page):
         # #     )
 
         if score.data % 100 == 0:
-            if score.data % 100 == 0:
-                message = 'Игра началась 🎅'
+            if score.data % 600 == 0:
+                message = 'Твой приз 🎶'
+            elif score.data % 500 == 0:
+                message = 'Твой приз 👕'
+            elif score.data % 400 == 0:
+                message = 'Твой приз 👖'
+            elif score.data % 300 == 0:
+                message = 'Твой приз 🍬'
             elif score.data % 200 == 0:
                 message = 'Твой приз 🧦'
-            elif score.data % 300 == 0:
-                message = 'Твой приз 🍬'   
-            elif score.data % 400 == 0:
-                message = 'Твой приз 👖'  
-            elif score.data % 500 == 0:
-                message = 'Твой приз 👕' 
-            elif score.data % 600 == 0:
-                message = 'Твой приз 🎶'
+            elif score.data == 0:  # Если score.data равно 0, игра только начинается
+                message = 'Игра началась 🎅'
             else:
                 message = 'Ты выиграла все призы'
-                
-            snack_bar = ft.SnackBar(
+        
+           snack_bar = ft.SnackBar(
                 content=ft.Text(
                     value=message,
                     size=20,
                     color="#ff8b1f",
                     text_align=ft.TextAlign.CENTER
                 ),
-                bgcolor="#25223a"
+                   bgcolor="#25223a"
             )
-
+        
             page.overlay.append(snack_bar)
             snack_bar.open = True
             progress_bar.value = 0
