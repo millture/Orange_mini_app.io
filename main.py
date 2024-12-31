@@ -5,7 +5,7 @@ import flet as ft
 async def main(page: ft.Page):
     page.title = 'Cliker'
     page.theme_mode = ft.ThemeMode.DARK
-    page.bgcolor = "#141212"
+    page.bgcolor = "#FFFFFF"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.fonts = {'Fonts': '/assets/fonts/Fonts.ttf'}
@@ -78,7 +78,6 @@ async def main(page: ft.Page):
                 message = 'Твой первый приз 🧦'
             elif score.data % 25 == 0:
                 message = 'Игра началась 🎅'
-                
 
             snack_bar = ft.SnackBar(
                 content=ft.Text(
@@ -87,13 +86,13 @@ async def main(page: ft.Page):
                     color="#ff8b1f",
                     text_align=ft.TextAlign.CENTER
                 ),
-                bgcolor="#25223a"
+                bgcolor="#f0f9f7"
             )
 
             page.overlay.append(snack_bar)
             snack_bar.open = True
             progress_bar.value = 0
-            
+
         page.update()
 
         await asyncio.sleep(0.1)
@@ -104,12 +103,11 @@ async def main(page: ft.Page):
         page.update()
         # page.overlay.clear()
 
-
-    score = ft.Text(value="0", size=100, data=0)
+    score = ft.Text(value="0", size=100, data=0, color="#fa8128")
     score_counter = ft.Text(size=50, animate_opacity=ft.Animation(duration=600, curve=ft.AnimationCurve.BOUNCE_IN))
 
     image = ft.Image(
-        src="pngegg.png",
+        src="newphoto.jpg",
         fit=ft.ImageFit.CONTAIN,
         width=250,  # Установите желаемую ширину
         animate_scale=ft.Animation(duration=600, curve=ft.AnimationCurve.EASE)
@@ -136,6 +134,7 @@ async def main(page: ft.Page):
             border_radius=ft.BorderRadius(10, 10, 10, 10)
         )
     )
+
 
 if __name__ == "__main__":
     # ft.app(target=main, view=ft.WEB_BROWSER)
