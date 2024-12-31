@@ -5,7 +5,7 @@ import flet as ft
 async def main(page: ft.Page):
     page.title = 'Cliker'
     page.theme_mode = ft.ThemeMode.DARK
-    page.bgcolor = "#FFFFFF"
+    page.bgcolor = "#fcfcfc"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.fonts = {'Fonts': '/assets/fonts/Fonts.ttf'}
