@@ -28,7 +28,7 @@ async def main(page: ft.Page):
         progress_bar.value += (1 / 100)
 
         if score.data % 50 == 0:
-            if score.data % 325 == 0:
+            if score.data % 350 == 0:
                 message = 'Ты выиграла все призы 🎆'
             elif score.data % 300 == 0:
                 message = 'Твой пятый приз 🎶'
@@ -40,7 +40,7 @@ async def main(page: ft.Page):
                 message = 'Твой второй приз 🍬'
             elif score.data % 100 == 0:
                 message = 'Твой первый приз 🧦'
-            elif score.data % 25 == 0:
+            elif score.data % 50 == 0:
                 message = 'Игра началась 🎅'
 
             snack_bar = ft.SnackBar(
