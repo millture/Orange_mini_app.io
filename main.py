@@ -25,43 +25,7 @@ async def main(page: ft.Page):
         score_counter.left = event.local_x
         score_counter.top = event.local_y
 
-        # score_counter.right = 0
-        # score_counter.left = event.data['local_x']
-        # score_counter.top = event.data['local_y']
-        # score_counter.bottom = 0
-
         progress_bar.value += (1 / 100)
-
-        # # if score.data % 50 == 0:
-        # #     if score.data % 100 == 0:
-        # #         message = 'Люблю тебя ♥️♥️'
-        # #     else:
-        # #         message = 'Ты ж моя принцесска 👸'
-
-        #     snack_bar = ft.SnackBar(
-        #         content=ft.Text(
-        #             value=message,
-        #             size=20,
-        #             color="#ff8b1f",
-        #             text_align=ft.TextAlign.CENTER
-        #         ),
-        #         bgcolor="#25223a"
-        #     )
-
-        #     page.overlay.append(snack_bar)
-        #     snack_bar.open = True
-        #     progress_bar.value = 0
-
-        # # if score.data % 100 == 0:
-        # #     page.snack_bar = ft.SnackBar(
-        # #         content=ft.Text(
-        # #             value='Люблю тебя ♥️',
-        # #             size = 20,
-        # #             color="#ff8b1f",
-        # #             text_align=ft.TextAlign.CENTER
-        # #         ),
-        # #         bgcolor="#25223a"
-        # #     )
 
         if score.data % 50 == 0:
             if score.data % 325 == 0:
